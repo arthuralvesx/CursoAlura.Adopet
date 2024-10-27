@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Alura.Adopet.Console
+﻿namespace Alura.Adopet.Console.Modelos
 {
     public class Pet
     {
@@ -19,7 +13,7 @@ namespace Alura.Adopet.Console
         }
         public override string ToString()
         {
-            return $"{this.Id} - {this.Nome} - {this.Tipo}";
+            return $"{Id} - {Nome} - {Tipo}";
         }
     }
 }

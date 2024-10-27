@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.Design;
-using System.Linq;
+﻿using Alura.Adopet.Console.Comandos;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Alura.Adopet.Console
 {
@@ -22,8 +17,12 @@ namespace Alura.Adopet.Console
             .Select(t => t.GetCustomAttribute<DocComando>()!)
             .ToDictionary(d => d.Instrucao);
         }
+        public async Task ExecutarAsync(string[] args)
+        {
+            this.ExibeDocumentacao(parametros: args);
+        }
 
-        public void ExibeDocumentacao(string[] parametros)
+        private void ExibeDocumentacao(string[] parametros)
         {
             // se não passou mais nenhum argumento mostra help de todos os comandos
             if (parametros.Length == 1)
