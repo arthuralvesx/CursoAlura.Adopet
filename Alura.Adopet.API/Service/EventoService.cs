@@ -16,8 +16,8 @@ namespace Alura.Adopet.API.Service
             var proprietario = new Cliente()
             {
                 CPF = "111.111.111-22",
-                Nome = "André",
-                Email = "andre@email.com"
+                Nome = "Arthur",
+                Email = "arthur@email.com"
             };
             _context.Add(proprietario);
             var pet = new Pet()
